@@ -1,31 +1,39 @@
 # CivicResolve
 
-**Government Workflow Exception Control**
+### Government Workflow Exception Control
+
+**Live demo:** https://civicresolve-7afpdxt2my6phx977hmclj.streamlit.app/
 
 CivicResolve is a working product prototype for investigating and safely resolving exceptions in connected government workflows.
 
-Instead of asking an AI agent to autonomously make consequential decisions, CivicResolve separates deterministic detection, evidence reconstruction, AI-assisted interpretation, human authorization, bounded execution, and audit provenance.
+It combines deterministic exception detection, evidence reconstruction, bounded AI interpretation, human authorization, controlled action execution, and audit provenance.
 
-> This repository uses synthetic demonstration data only. It contains no real government, agency, customer, or production data.
+> **Demo scope:** All records, organizations, metrics, and workflow events are synthetic. This project contains no real government, agency, Neumo, customer, or production data.
 
 ---
 
-## Problem
+## The Problem
 
-Connected government workflows can span forms, licensing systems, payments, document validation, policies, approvals, ownership queues, and external integrations.
+Government workflows often span multiple systems:
 
-When these systems disagree, an application can become operationally stuck even though individual systems appear correct.
+- online forms;
+- licensing applications;
+- payment processors;
+- document validation;
+- policy requirements;
+- approvals;
+- ownership queues;
+- external integrations.
 
-Examples include:
+A workflow can become stuck even when individual systems appear to be working correctly.
 
-- payment succeeded but the licensing workflow still shows payment pending;
-- a required document is expired;
-- a workflow reaches a stage without an accountable owner;
-- a payment references a different application.
+For example:
 
-Staff often need to manually reconstruct what happened across several systems before they can safely determine the next operational step.
+> The payment system shows **SUCCESS**, but the licensing workflow still shows **AWAITING PAYMENT**.
 
-CivicResolve is designed as an exception-control layer for that problem.
+Resolving that exception may require staff to reconstruct events across several systems before they can determine what is safe to do next.
+
+CivicResolve is designed as an **exception-control layer** for that operational gap.
 
 ---
 
